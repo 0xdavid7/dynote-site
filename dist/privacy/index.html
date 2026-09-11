@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DyNote privacy policy: notes are processed locally and stored in your browser's extension storage.">
+    <title>Privacy policy — DyNote</title>
+    <link rel="canonical" href="https://dynote.crisp-charm-5510.chatgpt.site/privacy/">
+    <link rel="icon" href="/assets/dynote-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="../" aria-label="DyNote home">
+          <span class="brand-mark" aria-hidden="true">Dy</span>
+          <span>DyNote</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../#how-it-works">How it works</a>
+          <a href="../#faq">FAQ</a>
+          <a class="nav-privacy" href="./" aria-current="page">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-wrap">
+      <section class="privacy-hero" aria-labelledby="policy-title">
+        <p class="eyebrow">DyNote privacy policy</p>
+        <h1 id="policy-title">Local notes, clearly described.</h1>
+        <p>DyNote is a Chrome and Edge extension for placing small notes beside ordinary webpages. This policy describes what the extension processes, where it stays, and what happens when you export or import a backup.</p>
+        <div class="policy-meta">
+          <span><strong>Effective:</strong> 2026-09-11</span>
+          <span><strong>Developer:</strong> David Tran</span>
+          <span><strong>Contact:</strong> <a href="mailto:tranhuyducseven@gmail.com">tranhuyducseven@gmail.com</a></span>
+        </div>
+      </section>
+
+      <div class="policy-layout">
+        <aside class="policy-toc" aria-label="Policy sections">
+          <p>On this page</p>
+          <ol>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#stored">Data stored</a></li>
+            <li><a href="#processing">Local processing</a></li>
+            <li><a href="#permissions">Permissions</a></li>
+            <li><a href="#backups">Backups</a></li>
+            <li><a href="#retention">Retention</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#website">Website hosting</a></li>
+            <li><a href="#changes">Changes and contact</a></li>
+            <li><a href="#limited-use">Limited Use</a></li>
+          </ol>
+        </aside>
+
+        <article class="policy-content">
+          <section id="summary" class="privacy-callout">
+            <p><strong>The short version:</strong> DyNote stores your notes in the browser profile where you use the extension. It has no account, cloud notebook, advertising, analytics, or note server. The extension does not make network requests for note data.</p>
+          </section>
+
+          <section id="stored">
+            <h2>1. Data stored</h2>
+            <p>When you create or edit a note, DyNote stores the information needed to show and restore it:</p>
+            <ul>
+              <li>the note text you choose to write;</li>
+              <li>the page URL and title;</li>
+              <li>contextual anchor details, such as a DOM selector, nearby text, element hints, and document coordinates;</li>
+              <li>note appearance, including color and collapsed state; and</li>
+              <li>creation and update timestamps.</li>
+            </ul>
+            <p>Notes may contain anything you type, including information copied from a webpage. DyNote uses this information to display, restore, edit, delete, undo, export, and import your notes.</p>
+          </section>
+
+          <section id="processing">
+            <h2>2. Local page processing</h2>
+            <p>On matching HTTP and HTTPS pages, DyNote’s content script processes the current page URL and relevant webpage DOM locally. It uses nearby page structure and text to choose an anchor, then tries to resolve that anchor when you revisit the page. A saved document position is retained as a fallback.</p>
+            <p>This local processing is part of the note feature. DyNote does not send the page URL, page title, DOM context, note text, or browsing activity to a DyNote server, and it does not maintain a browsing history or collect background analytics. The extension does not use fetch, XHR, WebSocket, or cloud sync for notes.</p>
+            <p>The overlay lives in the webpage DOM through a Shadow Root. DyNote does not promise that webpage code cannot inspect its own browser environment, and local storage is not encryption.</p>
+          </section>
+
+          <section id="permissions">
+            <h2>3. Permissions</h2>
+            <p>DyNote requests these Chrome or Edge permissions:</p>
+            <ul>
+              <li><strong>storage:</strong> to save notes in <code>chrome.storage.local</code>;</li>
+              <li><strong>activeTab:</strong> to operate on the current page after your action; and</li>
+              <li><strong>scripting:</strong> to provide the page overlay and note interactions on an already-open webpage.</li>
+            </ul>
+            <p>The extension is declared for HTTP and HTTPS pages so notes can reappear when you revisit them. It has no <code>tabs</code>, downloads, history, or web navigation permission.</p>
+          </section>
+
+          <section id="backups">
+            <h2>4. Export and import</h2>
+            <p>Export creates a JSON file through your browser’s local download flow. Import reads a JSON file you select, validates it locally, shows a merge preview, and applies it locally after confirmation. Imported files are limited to 25 MiB.</p>
+            <p>Existing notes are retained. A differing same-page ID collision is restored as a new copy, while an equivalent copy is skipped on a repeat import. DyNote does not upload, transmit, or store a backup on a server.</p>
+            <p>Downloaded backups remain wherever you save them and are controlled by you. DyNote does not encrypt those files.</p>
+          </section>
+
+          <section id="retention">
+            <h2>5. Retention and deletion</h2>
+            <p>Notes remain in the extension’s local storage until you delete them, clear the extension’s data, or uninstall the extension. Uninstalling the extension removes its extension-local data according to the browser’s extension storage behavior.</p>
+            <p>JSON backups are separate files. They remain on your device until you delete them, and browser or operating-system backup policies may also affect where copies exist. DyNote does not sync notes between browsers or profiles.</p>
+          </section>
+
+          <section id="security">
+            <h2>6. Security and access</h2>
+            <p>Keeping notes local limits where DyNote sends them, but it does not protect them from someone who can access your unlocked device or browser profile. Protect your browser profile and exported files using the security controls you trust. DyNote does not claim that notes or backups are encrypted.</p>
+            <p>There is no DyNote account for you to reset or recover. If you choose to send specific information to <a href="mailto:tranhuyducseven@gmail.com">tranhuyducseven@gmail.com</a> for support, that information is shared by you and handled through the support channel you choose.</p>
+          </section>
+
+          <section id="website">
+            <h2>7. Website and hosting</h2>
+            <p>This privacy page and the DyNote landing page are static website assets separate from the extension. The website itself has no analytics, advertising cookies, accounts, forms, or note storage.</p>
+            <p>The website host may process ordinary technical information needed to deliver and protect a public site, such as IP address, request time, user agent, and security or error logs. Those hosting records are controlled by the host and are separate from the extension’s local notes. See <a href="https://openai.com/policies/privacy-policy/">OpenAI’s privacy policy</a> for the host’s practices.</p>
+          </section>
+
+          <section id="changes">
+            <h2>8. Changes and contact</h2>
+            <p>If DyNote’s data practices change, this policy and the Chrome Web Store disclosures will be updated as appropriate. Questions or privacy requests can be sent to <a href="mailto:tranhuyducseven@gmail.com">tranhuyducseven@gmail.com</a>.</p>
+            <p><strong>Publisher:</strong> David Tran<br><strong>Support:</strong> <a href="mailto:tranhuyducseven@gmail.com">tranhuyducseven@gmail.com</a></p>
+          </section>
+
+          <section id="limited-use" class="policy-last">
+            <h2>9. Chrome Web Store Limited Use</h2>
+            <p>DyNote’s use of information is limited to providing its single purpose: local notes on webpages and the related display, restoration, editing, deletion, backup, and import features. DyNote does not sell the information described here, transfer it to a DyNote server, or use it for personalized advertising. If you choose to send information for support, you make that specific disclosure through the support channel.</p>
+            <p>See the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/">Chrome Web Store Limited Use policy</a> for the platform’s current requirements.</p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <p><strong>DyNote 0.1.0</strong> · Local notes for the moving web.</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="../">Home</a>
+          <a href="../#faq">FAQ</a>
+          <a href="mailto:tranhuyducseven@gmail.com">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

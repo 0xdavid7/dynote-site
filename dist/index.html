@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DyNote keeps small, local notes beside the exact part of a webpage where you made them.">
+    <title>DyNote — Keep the thought. Keep its place.</title>
+    <link rel="canonical" href="https://dynote.crisp-charm-5510.chatgpt.site/">
+    <link rel="icon" href="/assets/dynote-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="./" aria-label="DyNote home">
+          <span class="brand-mark" aria-hidden="true">Dy</span>
+          <span>DyNote</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#how-it-works">How it works</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-privacy" href="privacy/">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A study note for the web</p>
+          <h1 id="hero-title">Keep the thought.<br>Keep its place.</h1>
+          <p class="hero-lede">DyNote puts a small, useful note beside the paragraph, equation, or code you want to remember. Come back later and find it where the thought belongs.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#how-it-works">See how it works</a>
+            <a class="button button-secondary" href="privacy/">Read the privacy policy</a>
+            <span class="button button-disabled" aria-disabled="true">Chrome Web Store release coming soon</span>
+          </div>
+          <p class="hero-note"><strong>Chrome and Edge · MV3 · DyNote 0.1.0</strong><br>Local-first notes with JSON export and validated import.</p>
+        </div>
+
+        <figure class="browser-frame" aria-labelledby="product-caption">
+          <div class="browser-bar" aria-hidden="true">
+            <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+            <span class="browser-address">lesson.html · anchored reading</span>
+          </div>
+          <div class="browser-screen">
+            <img src="/assets/dynote-lesson-populated.png" width="1280" height="900" alt="DyNote note reading Layout anchored beside a lesson paragraph and a code example">
+          </div>
+          <figcaption id="product-caption" class="browser-caption">A real DyNote note beside a changing lesson page, with a technical code excerpt below it.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow">Made for the margin</p>
+          <h2 id="features-title">A little room for the thought between the lines.</h2>
+          <p>DyNote stays compact while you read, study, compare, and work through a page that keeps moving.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-mark feature-mark--yellow" aria-hidden="true">⌖</div>
+            <h3>Restore the context</h3>
+            <p>Notes remember a page location with nearby DOM context and a document position, so they can follow ordinary reflow and layout changes.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-mark feature-mark--mint" aria-hidden="true">↺</div>
+            <h3>Keep it local</h3>
+            <p>Text and placement stay in your browser’s local extension storage. There is no account, sync service, analytics, or note network.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-mark feature-mark--lavender" aria-hidden="true">✦</div>
+            <h3>Shape the margin</h3>
+            <p>Drag a note, choose one of four calm colors, collapse it to a pin, or undo a delete. Quiet autosave keeps up as you type.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works" aria-labelledby="steps-title">
+        <div class="section-heading">
+          <p class="eyebrow">Three small moves</p>
+          <h2 id="steps-title">Place it once. Find it again.</h2>
+          <p>The page stays yours. DyNote only adds a lightweight layer when you ask it to.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number" aria-hidden="true">01</span>
+            <h3>Choose Add a note</h3>
+            <p>Open the DyNote popup, choose <strong>Add a note</strong>, then click beside the passage or example you want to mark.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number" aria-hidden="true">02</span>
+            <h3>Write and arrange</h3>
+            <p>Type freely. Move the card by its header, change its color, or collapse it into a small pin when the page needs space.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number" aria-hidden="true">03</span>
+            <h3>Return with the thread</h3>
+            <p>Visit the page again to restore your notes. Export a JSON backup or validate and merge one later from the popup.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="privacy" aria-labelledby="privacy-title">
+        <div class="privacy-strip">
+          <div>
+            <p class="eyebrow">Local by design</p>
+            <h2 id="privacy-title">Your notes stay with your browser.</h2>
+            <p>DyNote has no login and no cloud notebook. Its content script processes the current page locally to place and restore the note you asked for.</p>
+          </div>
+          <ul class="privacy-list">
+            <li>Saved in <code>chrome.storage.local</code> on your device</li>
+            <li>No extension fetch, XHR, WebSocket, analytics, or account</li>
+            <li>JSON export and validated import stay on your device</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Good to know</p>
+          <h2 id="faq-title">A clear margin of error.</h2>
+          <p>DyNote is useful on ordinary pages and honest about the browser surfaces it cannot reach.</p>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>Does DyNote sync between devices?</h3>
+            <p>No. Notes stay in the current browser profile. Use the local JSON backup when you need to carry them yourself.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Which pages can use it?</h3>
+            <p>DyNote targets ordinary top-level HTTP and HTTPS pages. Browser-internal pages, extension stores, embedded frames, and closed shadow roots are outside its reach.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What happens when an import meets a note?</h3>
+            <p>Existing notes stay unchanged. A differing ID collision is restored as a copy, an equivalent copy is skipped on repeat import, and each file is validated before merging.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can a layout change move a note?</h3>
+            <p>It can. DyNote uses contextual anchors and a saved position, but virtualized content, heavy redesigns, and responsive changes can make a best-effort match unavailable.</p>
+          </article>
+        </div>
+        <div class="honest-limit"><strong>Browser limits:</strong> the overlay is part of the webpage DOM through a Shadow Root. A page may still inspect or style parts of its own browser environment, and DyNote does not promise encryption.</div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <p><strong>DyNote 0.1.0</strong> · A quiet place for a useful thought.</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="privacy/">Privacy</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="mailto:tranhuyducseven@gmail.com">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
