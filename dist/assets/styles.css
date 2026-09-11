@@ -215,6 +215,15 @@ h1 {
 
 .button-secondary:hover { border-color: var(--blue); color: var(--blue-dark); }
 
+.button-store {
+  border-color: #d5b33b;
+  background: var(--yellow);
+  color: #3f351b;
+  box-shadow: 0 4px 0 #d8b83f;
+}
+
+.button-store:hover { background: #f9d968; color: #3f351b; }
+
 .button-disabled {
   border-color: var(--line);
   background: #f0f3f8;
@@ -389,6 +398,22 @@ h1 {
 
 .honest-limit strong { color: var(--ink); }
 
+.contact-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 36px 40px;
+  border: 1px solid #d9c98f;
+  border-radius: 12px;
+  background: var(--yellow-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-panel h2 { margin-bottom: 10px; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.contact-panel p:not(.eyebrow) { max-width: 40rem; margin-bottom: 0; color: var(--ink-soft); }
+.contact-panel .button { flex: 0 0 auto; }
+
 .site-footer {
   margin-top: 110px;
   border-top: 1px solid var(--line);
@@ -449,6 +474,7 @@ h1 {
   .browser-frame { max-width: 760px; margin: 0 auto; transform: none; }
   .feature-grid,
   .steps-grid { grid-template-columns: 1fr; }
+  .contact-panel { align-items: flex-start; flex-direction: column; }
   .feature-card { min-height: 0; }
   .policy-layout { grid-template-columns: 1fr; gap: 32px; }
   .policy-toc { position: static; padding: 20px 23px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
